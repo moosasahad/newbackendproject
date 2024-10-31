@@ -3,8 +3,10 @@ const express = require("express")
 const app = express();
 const mongoose = require("mongoose")
 const userrout = require("./Routes/userRoutes")
+const cors = require('cors');
 
 app.use(express.json())
+app.use(cors());
 
 app.use(userrout)
 mongoose.connect(process.env.MONGO_URI, {
