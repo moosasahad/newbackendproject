@@ -5,6 +5,7 @@ const tryCatch = require("../Middileware/tryCatch")
 routes
 .post('/signup',tryCatch(logincontroller.userRg))
 .post('/login',tryCatch(logincontroller.userlogin))
+.get('/get',tryCatch(logincontroller.getuser))
 
 
 

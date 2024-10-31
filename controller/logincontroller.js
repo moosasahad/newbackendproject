@@ -43,9 +43,14 @@ const userlogin = async (req, res, next) => {
   }
   res.status(200).json({ status: "success", message: "Logged in successfully" });
 }
+const getuser = async (req,res,next)=>{
+  const userid = await user.find()
+  res.json("FKDGUDF"+userid)
+}
 
 module.exports = {
   userRg,
   userlogin,
+  getuser,
 //   userlogout,
 };
