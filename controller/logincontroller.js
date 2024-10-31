@@ -45,7 +45,7 @@ const userlogin = async (req, res, next) => {
 }
 const getuser = async (req,res,next)=>{
   const userid = await user.find()
-  res.json("FKDGUDF"+userid)
+  res.json({message :"jsdfjdhsfkjdhk",userid})
 }
 
 module.exports = {
