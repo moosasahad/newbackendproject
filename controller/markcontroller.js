@@ -35,14 +35,13 @@ const mongoose = require("mongoose");
 const markcontroller = async (req, res, next) => {
   const { TeacherId, ...student } = req.body;
 
-  // Validate that required fields are provided
   if (!student.StudentName || !student.RollNumber || !student.Class || !student.SubjectMarks) {
     return res.status(400).json({ message: "All student fields must be provided." });
   }
 
-  // Check for devision
+
   if (!student.devision) {
-    student.devision = "Default Devision"; // Provide a default value or handle accordingly
+    student.devision = "Default Devision"; 
   }
 
   console.log("req.body", { TeacherId, ...student });
