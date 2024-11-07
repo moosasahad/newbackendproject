@@ -30,10 +30,10 @@ const userRg = async (req, res, next) => {
 const userlogin = async (req, res, next) => {
 
   const { username, password } = req.body;
-
+  
 
   const loginuser = await user.findOne({ username });
-
+ 
   if (!loginuser) {
     return next(new CustomError("loginuser not found", 404));
   }
@@ -41,9 +41,9 @@ const userlogin = async (req, res, next) => {
   if (!password_match) {
     return next(new CustomError("password is wrong", 404));
   }
-  res.status(200).json({ status: "success", message: "Logged in successfully" });
+  res.status(200).json({ status: "success", message: "Logged in successfully",id:loginuser._id });
 }
-const getuser = async (req,res,next)=>{
+const getuser = async (req,res,next)=>{ 
   const userid = await user.find()
   res.json({message :"jsdfjdhsfkjdhk",userid})
 }

@@ -12,7 +12,7 @@ routes
 // student 
 
 .post('/marke',tryCatch(markcontroller.markcontroller)) 
-.get('/allmarke',tryCatch(markcontroller.getallmark)) 
+.get('/allmarke/:teacherId',tryCatch(markcontroller.getallmark)) 
 
 
 
