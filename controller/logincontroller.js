@@ -1,5 +1,5 @@
 const user = require("../Models/userSchema");
-const bcrypt = require("bcrypt");
+const bcrypt = require('bcryptjs');
 const CustomError = require("../utils/CustomError");
 
 
